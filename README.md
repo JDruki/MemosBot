@@ -37,11 +37,42 @@ WEBHOOK_LISTEN = "127.0.0.1"
 ```
 
 ## 后台运行
+
 **建议用screen后台，或者写systemd service**
+
 ```bash
 $ screen -R memos
 $ python3 app.py
 ```
 
+# Docker部署：
+
+## 克隆仓库：
+
+```
+git clone https://github.com/JDruki/MemosBot.git
+```
+
+## 编辑`.env`文件：
+
+```
+vi .env #按照文档修改
+```
+
+## 构建镜像：
+
+```
+docker build -t memobot .
+```
+
+## 启动镜像：
+
+```
+docker compose up -d
+```
+
+
+
 # Bot使用
+
 [简单使用教程](https://blog.529213.xyz/article/memos-bot)
